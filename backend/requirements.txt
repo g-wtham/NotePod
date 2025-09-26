@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+pydantic
+python-dotenv
+google-generativeai
+python-multipart
+Pillow
+youtube-transcript-api

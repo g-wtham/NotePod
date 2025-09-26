@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Placement Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Collapsible Left Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>Data Structures & Algo</h2>
+                <div class="progress-bar">
+                    <div class="progress-bar-fill" id="progress-bar-fill"></div>
+                </div>
+            </div>
+            <ul class="lesson-list" id="lesson-list">
+                <!-- Lesson items will be dynamically inserted here by JS -->
+            </ul>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="main-header">
+                <button class="sidebar-toggle" id="sidebar-toggle">
+                    <i class="material-icons">menu</i>
+                </button>
+                <h1 class="lesson-title" id="lesson-title">Loading...</h1>
+            </header>
+
+            <div class="content-area">
+                <div class="video-container">
+                    <iframe id="video-player" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <div class="validation-section">
+                    <h3>Learning Validation</h3>
+
+                    <!-- Step 1: Note Uploader -->
+                    <div class="note-uploader">
+                        <h4>Step 1: Upload Your Handwritten Notes</h4>
+                        <div class="dropzone" id="dropzone">
+                            <p>Drag & drop an image/PDF of your notes here, or click to select a file.</p>
+                            <input type="file" id="file-input" class="hidden" accept="image/*,.pdf">
+                        </div>
+                        <p id="file-preview"></p>
+                    </div>
+
+                    <!-- Step 2: Quiz Area -->
+                    <div class="quiz-area hidden" id="quiz-area">
+                        <h4>Step 2: Verify Your Understanding</h4>
+                        <form id="quiz-form">
+                            <!-- Quiz questions will be dynamically inserted here -->
+                        </form>
+                    </div>
+
+                    <!-- Step 3: Feedback Area -->
+                    <div class="feedback-area hidden" id="feedback-area">
+                         <h4>Evaluation Feedback</h4>
+                         <div class="feedback-area-content" id="feedback-content"></div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button class="btn-submit" id="submit-button" disabled>Submit for Evaluation</button>
+
+                </div>
+            </div>
+
+            <footer class="bottom-footer">
+                <a href="#" class="nav-arrow" id="prev-lesson-btn"><i class="material-icons">arrow_back</i></a>
+                <div class="lesson-status" id="lesson-status-footer">
+                    <span>Lesson Incomplete</span>
+                </div>
+                <a href="#" class="nav-arrow disabled" id="next-lesson-btn"><i class="material-icons">arrow_forward</i></a>
+            </footer>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

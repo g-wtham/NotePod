@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="padding: 2rem;">
+    <div class="teacher-portal" style="max-width: 800px; margin: auto;">
+        <h1>Teacher Portal</h1>
+
+        <section class="validation-section" style="margin-top: 2rem;">
+            <h3>Add New Video Lesson</h3>
+            <form id="add-video-form">
+                <div style="margin-bottom: 1rem;">
+                    <label for="video-title" style="display: block; margin-bottom: 0.5rem;">Video Title</label>
+                    <input type="text" id="video-title" required style="width: 100%; padding: 0.5rem; background: var(--primary-bg); color: var(--primary-text); border: 1px solid var(--border-color); border-radius: 4px;">
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <label for="youtube-url" style="display: block; margin-bottom: 0.5rem;">Full YouTube URL (watch or youtu.be)</label>
+                    <input type="url" id="youtube-url" required placeholder="https://www.youtube.com/watch?v=..." style="width: 100%; padding: 0.5rem; background: var(--primary-bg); color: var(--primary-text); border: 1px solid var(--border-color); border-radius: 4px;">
+                </div>
+                <button type="submit" class="btn-submit" id="add-lesson-btn">Add Lesson</button>
+            </form>
+            <p id="teacher-message" style="margin-top: 1rem; color: var(--success-color);"></p>
+        </section>
+
+        <section class="validation-section" style="margin-top: 2rem;">
+            <h3>Student Progress Overview</h3>
+            <div id="progress-dashboard">
+                Loading progress...
+            </div>
+        </section>
+    </div>
+    <script src="teacher.js"></script>
+</body>
+</html>
